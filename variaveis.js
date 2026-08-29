@@ -46,10 +46,64 @@ const fila = [];
 /*
 loop é um ciclo de perguntas
 */
-const resposta = pessoas[0] >=65
+
+pessoas.sort()
+const tamanho = pessoas.length
+//1 posição 
+//2 posição pergunta condicional
+//3 posição incremento ou decremento
+for(let i = 0; i < tamanho ; i++){
+const resposta = pessoas[i] >=65
 if(resposta){
-                fila.unshift(pessoas[0])
+                fila.unshift(pessoas[i])
 }        
 else{
-        fila.push(pessoas[0])
+        fila.push(pessoas[i])
 }
+}
+console.log(fila)
+
+//objetos
+//{}
+//dicionario
+const pessoa = {
+        "nome" : "david willians"
+}
+
+console.log(pessoa);
+console.log(pessoa.nome);
+pessoa.idade = 42;
+console.log(pessoa);
+pessoa.vivo = true;
+console.log(pessoa.idade);
+
+const pessoa2 = {
+        "nome": "Mateus",
+        "idade": 17,
+        "vivo": true
+}
+
+console.log(pessoa2);
+const pessoa3 = {
+        "nome": "brenda",
+        "idade": 18,
+        "vivo": true
+}
+
+console.log(pessoa3)
+
+console.log(fila)
+for(let i=0; i<tamanho; i++){
+        fila.pop();
+}
+
+pessoa.votos = 2;
+pessoa2.votos = 5;
+pessoa3.votos = 5;
+fila.push(pessoa);
+fila.push(pessoa2);
+fila.push(pessoa3);
+console.log(fila);
+
+console.log(fila[2]);
+console.log(`Quantidade de votos ${fila[2].votos}`)

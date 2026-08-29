@@ -9,7 +9,7 @@ app.get('/busca', (req, res) => {
 })
 
 app.get('/busca/:id', (req, res) => {
-    const numero = req.params.id
+    const numero = req.params.xx
     console.log(numero)
     const mensagem = `O número requisitado é: ${numero}`
   res.send(mensagem)
